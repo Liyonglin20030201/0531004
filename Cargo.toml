@@ -1,0 +1,18 @@
+[package]
+name = "tsdb-engine"
+version = "0.1.0"
+edition = "2021"
+description = "High-performance time-series database engine for IoT workloads"
+
+[dependencies]
+crc32fast = "1"
+byteorder = "1"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+tempfile = "3"
+rand = "0.8"
+
+[[bench]]
+name = "throughput"
+harness = false
